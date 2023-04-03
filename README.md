@@ -1,11 +1,8 @@
-# wine label reader toolkit
+# wine-label 
 
-> Computer vision project to read a label on a wine bottle using tensorflow, OpenCV and Tesseract.
+Le but ici est de faire en sorte que l'ordinateur puisse lire l'étiquette d'une bouteille de vin à partir d'une simple photo. Pourquoi est-ce compliqué, vous demandez-vous peut-être ? Eh bien, tout d'abord, nous ne pouvons pas appeler directement une bibliothèque OCR (reconnaissance optique de caractères) comme Tesseract, car le texte sur l'étiquette est déformé sur un cylindre et nous ne pouvons pas extraire correctement les caractères et donc les mots et les phrases.
 
-The goal here is to make the computer read the label of a bottle of wine from a simple photo. Why is this complicated, you may ask? Well, first of all, we can't call directly an OCR (Optical Character Recognition) library like tesseract, because the text on the label is distorted on a cylinder and because of that, we can't extract correctly the characters and thus the words and sentences.
-
-To use this package on your machine you have to install the dependencies in the requirement.txt move the photo you want to train in the "X" folder and the masks in the "y" folder and the photo you want to read in the "to_read" folder.
-To configure the files location or the parameters of the U-net use the Config.json file.
+Pour utiliser ce package sur votre machine, vous devez installer les dépendances du fichier requirement.txt, déplacer la photo que vous souhaitez utiliser pour l'entraînement dans le dossier "X" et les masques dans le dossier "y", et la photo que vous souhaitez lire dans le dossier "to_read". Pour configurer l'emplacement des fichiers ou les paramètres du U-Net, utilisez le fichier Config.json.
 
 ## train model on images
 ```
@@ -19,6 +16,3 @@ python main.py --read
 ```
 python main.py --train --read
 ```
-
-# Live demo online:
-https://plural.run/wineReader
